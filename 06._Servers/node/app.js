@@ -15,7 +15,7 @@ app.get("/", (req, res) =>{
     res.send({message: "Hello"})
 });
 
-//parse JSON
+//parsing JSON
 app.get('/data/json', async (req, res) => {
     try {
       const jsonData = await readFile(`${dataFilesPath}/me.json`, 'utf8');
@@ -60,7 +60,7 @@ app.get('/data/yaml', async (req, res) => {
     }
 });
   
-// parisng TXT
+// parsing TXT
 app.get('/data/txt', async (req, res) => {
     try {
       const txtData = await readFile(`${dataFilesPath}/me.txt`, 'utf8');
