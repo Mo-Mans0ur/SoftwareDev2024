@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python-dev-example"
+version = "0.1.0"
+description = ""
+authors = ["Mo-Mans0ur <Moha1998@outlook.dk>"]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
