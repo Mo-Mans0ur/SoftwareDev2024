@@ -1,0 +1,7 @@
+{
+  "invoice_created": [
+    "http://myurl.com/webhook",
+    "http://your-receiver-url.com/webhook",
+    "http://mosurl.com/webhook"
+  ]
+}
