@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const webhookUrl = 'http://localhost:8080/register';
 const eventToListen = 'invoice_created';
-const notificationUrl = 'http://mosurl.com/webhook'; // Replace with your actual listener endpoint
+const notificationUrl = 'http://mosurl.com/webhook'; 
 
 async function registerWebhook() {
   try {
