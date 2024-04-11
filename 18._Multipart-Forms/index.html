@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>Basic Form</h2>
+    <form action="localhost:8080/form" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="password">
+
+        <button type="submit" value="Send data">Submit</button>
+    </form>
+
+    <h2>File Form</h2>
+    <form action="localhost:8080/fileform" method="POST" enctype="multipart/form-data">
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file" accept="image/png">
+
+        <label for="description"></label>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" placeholder="Enter description">
+        <button type="submit" value="Send data">Submit</button>
+    
+</body>
+</html>
