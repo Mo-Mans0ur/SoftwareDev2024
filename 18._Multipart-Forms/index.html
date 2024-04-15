@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Basic Form</h2>
-    <form action="localhost:8080/form" method="POST">
+    <form action="http://localhost:8080/form" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="username">
         <label for="password">Password:</label>
@@ -17,9 +17,9 @@
     </form>
 
     <h2>File Form</h2>
-    <form action="localhost:8080/fileform" method="POST" enctype="multipart/form-data">
+    <form action="http://localhost:8080/fileform" method="POST" enctype="multipart/form-data">
         <label for="file">File:</label>
-        <input type="file" id="file" name="file" accept="image/png">
+        <input type="file" id="file" name="file" accept="image/*" >
 
         <label for="description"></label>
         <label for="description">Description:</label>
@@ -27,4 +27,30 @@
         <button type="submit" value="Send data">Submit</button>
     
 </body>
+
+<script>
+    const fileInput = document.querySelector('input[type="file"]');
+    
+
+    fileInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+
+        const validTypes = ["image/jpeg", "image/png", "image/svg"];
+        if (!validTypes.includes(file.type)) {
+            alert("Invalid file type. Please upload an image.");
+            fileInput.value = "";
+            return;
+        }
+        
+        const maxSize = 10* 1024 * 1024; // 10MB
+        if (file.size > maxSize) {
+            alert(`File is too large. max size is ${maxSize}.`);
+            fileInput.value = "";
+            return;
+        }
+    });
+
+    
+</script>
+
 </html>
