@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "23-database-migration"
+version = "0.1.0"
+description = ""
+authors = ["Mo-Mans0ur <Moha1998@outlook.dk>"]
+readme = "README.md"
+packages = [{include = "23"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+alembic = "^1.13.1"
+sqlalchemy = "^2.0.29"
+pymysql = "^1.1.0"
+cryptography = "^42.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
